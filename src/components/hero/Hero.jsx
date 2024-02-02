@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Box } from '@mui/material';
 import Carousel from 'react-material-ui-carousel';
+import Category from '../categories/Category';
 
 const CustomCarousel = () => {
   const [activeIndex, setActiveIndex] = useState(0);
@@ -10,6 +11,7 @@ const CustomCarousel = () => {
   };
 
   return (
+    <>
     <Carousel
       index={activeIndex}
       onChange={(index) => handleSlideChange(index)}
@@ -25,6 +27,8 @@ const CustomCarousel = () => {
         </Box>
       ))}
     </Carousel>
+    <Category/>
+    </>
   );
 };
 
