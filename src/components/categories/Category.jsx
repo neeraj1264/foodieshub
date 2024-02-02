@@ -22,10 +22,10 @@ const Category = () => {
   return (
     <Container maxWidth="md" mt={4}>
       <Typography variant="h4" sx={{ textAlign: 'center', margin: '2rem' }}>Categories</Typography>
-      <Grid container spacing={2} sx={{ display: 'flex', justifyContent: 'left'}}>
+      <Grid container spacing={2} sx={{ display: 'flex', justifyContent: 'left', flexWrap: 'nowrap', overflowX: 'auto' }}>
         {categories.map((category, index) => (
-          <Grid item key={index}>
-            <Paper elevation={3} sx={{ padding: '1rem', textAlign: 'center', borderRadius: '8px', width: '120px' }}>
+          <Grid item key={index} sx={{ flexShrink: 0, whiteSpace: 'nowrap' }}>
+          <Paper elevation={3} sx={{ padding: '1rem', textAlign: 'center', borderRadius: '8px', width: '120px' }}>
               <Link to={category.name} color="inherit" underline="none">
               <img src={category.image} alt={category.name} style={{ width: '50px', height: '50px' }} />
                 <Typography variant="h6">{category.name}</Typography>

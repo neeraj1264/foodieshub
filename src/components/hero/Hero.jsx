@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import { Box } from '@mui/material';
 import Carousel from 'react-material-ui-carousel';
 import Category from '../categories/Category';
-
 const CustomCarousel = () => {
   const [activeIndex, setActiveIndex] = useState(0);
 
@@ -18,6 +17,7 @@ const CustomCarousel = () => {
       animation="slide"
       timeout={2000}
       cycleNavigation
+      height="297px"
       autoPlay={true}  // Set autoPlay to true for automatic scrolling
       stopAutoPlayOnHover={false}  // Allow auto-scrolling even when the carousel is hovered
     >
@@ -34,15 +34,15 @@ const CustomCarousel = () => {
 
 const carouselItems = [
   {
-    imageSrc: 'pizza.jpeg',
+    imageSrc: 's-img-2.jpg',
     altText: 'Slide 1',
   },
   {
-    imageSrc: 'pizza.jpeg',
+    imageSrc: 's-img-2.jpg',
     altText: 'Slide 2',
   },
   {
-    imageSrc: 'pizza.jpeg',
+    imageSrc: 's-img-2.jpg',
     altText: 'Slide 3',
   },
 ];
